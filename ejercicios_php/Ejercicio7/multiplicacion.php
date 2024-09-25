@@ -7,7 +7,11 @@
 </head>
 <body>
     <?php
-    
+    $num = $_GET['multiplicacion'];
+    for ($i = 1; $i <= 10; $i++) {
+        $res = $i * $num;
+        echo "$i X $num = $res </br>"; 
+    }
     ?>
 </body>
 </html>
