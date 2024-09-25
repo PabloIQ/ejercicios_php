@@ -6,16 +6,10 @@
     <title>Saludo</title>
 </head>
 <body>
-    <form action="saludo2.php" method="$_GET">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre">
-        <br>
-        <br>
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" id="apellido">
-        <br>
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
+    <?php
+    $palabra1 = $_GET['nombre'];
+    $palabra2 = $_GET['apellido'];
+    echo "¡ Hola $palabra1 $palabra2 !";
+    ?>
 </body>
 </html>

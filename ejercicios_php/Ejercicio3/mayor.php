@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayor de 3</title>
+    <title>Mayor que 3</title>
 </head>
 <body>
-    <form action="mayor2.php" method="$_GET">
-        <label for="num1">Escriba el primer número</label>
-        <br>
-        <input type="number" name="num1" id="num1">
-        <br>
-        <br>
-        <label for="num2">Escriba el segundo número</label>
-        <br>
-        <input type="number" name="num2" id="num2">
-        <br>
-        <br>
-        <label for="num3">Escriba el tercer número</label>
-        <br>
-        <input type="number" name="num3" id="num3">
-        <br>
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
+    <?php
+    $num1 = $_GET['num1'];
+    $num2 = $_GET['num2'];
+    $num3 = $_GET['num3'];
+    if ($num1 > $num2 && $num1 > $num3) {
+        echo "El numero mayor es $num1 <br/><br/>";
+    } else if ($num1 > $num2 && $num3 > $num1) {
+        echo "El numero mayor es $num3 <br/><br/>";
+    } else if ($num2 > $num1 && $num2 > $num3) {
+        echo "El numero mayor es $num2 <br/><br/>";
+    } else if ($num2 > $num1 && $num3 > $num2) {
+        echo "El numero mayor es $num3 <br/><br/>";
+    } else if ($num1 > $num1 && $num3 > $num2) {
+        echo "El numero mayor es $num3 <br/><br/>";
+    } else {
+        echo "El numero mayor es $num2 <br/><br/>";
+    }
+    ?>
 </body>
 </html>
